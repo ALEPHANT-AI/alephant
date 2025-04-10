@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALEPHANT.ONE | O Novo Avatar da Sua Marca</title>
+  <!-- Fonte moderna Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* =================== Variáveis e Reset =================== */
+    :root {
+      --black: #0a0a0c;
+      --deep-purple: #2a0a4a;
+      --purple: #4c1c99;
+      --light-purple: #8a42ff;
+      --white: #ffffff;
+      --neon-pink: #ff2cee;
+      --neon-pink-glow: 0 0 12px #ff2cee, 0 0 25px rgba(255, 44, 238, 0.3);
+      --grad-purple: linear-gradient(135deg, #2a0a4a, #4c1c99);
+      --grad-highlight: linear-gradient(135deg, #4c1c99, #ff2cee);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* =================== Header & Navegação =================== */
+    header {
+      background: var(--grad-purple);
+      padding: 1rem 0.5rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    /* Logo no Header usando a imagem */
+    .header-logo {
+      display: flex;
+      align-items: center;
+    }
+    .header-logo img {
+      width: 60px;
+      height: auto;
+      margin-right: 10px;
+    }
+    .header-logo .logo-text {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 1px;
+    }
+    .header-logo .logo-text span {
+      color: var(--neon-pink);
+      text-shadow: var(--neon-pink-glow);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-left: 2rem;
+    }
+    nav ul li a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: var(--neon-pink);
+      text-shadow: var(--neon-pink-glow);
+    }
+    /* Menu Hamburger para mobile */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--white);
+      margin: 4px 0;
+    }
+    
+    /* =================== Hero Section =================== */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      /* Utiliza o Two Shot como background */
+      background: url('https://i.imgur.com/ck2gkBx.jpg') center center/cover;
+      background-blend-mode: overlay;
+      background-color: rgba(10, 10, 12, 0.85);
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px; /* Espaço para header fixo */
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle at 50% 50%, transparent 15%, var(--black) 85%);
+      z-index: 1;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%234c1c99' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.2;
+      z-index: 0;
+      animation: grid-move 60s linear infinite;
+    }
+    @keyframes grid-move {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--neon-pink);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 1rem;
+      text-shadow: var(--neon-pink-glow);
+    }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    h1 span {
+      display: block;
+      color: var(--neon-pink);
+      text-shadow: var(--neon-pink-glow);
+    }
+    .slogan {
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--grad-highlight);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(76, 28, 153, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(76, 28, 153, 0.6);
+    }
+    .btn:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: all 0.5s;
+    }
+    .btn:hover:before {
+      left: 100%;
+    }
+    
+    /* =================== Seções =================== */
+    .section {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-dark {
+      background-color: var(--black);
+    }
+    .section-purple {
+      background: var(--grad-purple);
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background: var(--neon-pink);
+      bottom: -10px;
+      left: 20%;
+      box-shadow: var(--neon-pink-glow);
+    }
+    .text-highlight {
+      color: var(--neon-pink);
+      text-shadow: var(--neon-pink-glow);
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 2rem;
+    }
+    .card {
+      background: rgba(24, 16, 40, 0.7);
+      border-radius: 10px;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(76, 28, 153, 0.2);
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(76, 28, 153, 0.3);
+    }
+    .card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--grad-highlight);
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      color: var(--neon-pink);
+      margin-bottom: 1.5rem;
+      text-shadow: var(--neon-pink-glow);
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card p {
+      color: #d2d2e0;
+      margin-bottom: 1.5rem;
+    }
+    .testimonials {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .testimonial {
+      background: rgba(24, 16, 40, 0.7);
+      border-radius: 10px;
+      padding: 2rem;
+      max-width: 350px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(76, 28, 153, 0.2);
+    }
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .testimonial-text:before {
+      content: '"';
+      font-size: 4rem;
+      position: absolute;
+      left: -20px;
+      top: -20px;
+      opacity: 0.1;
+      color: var(--neon-pink);
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    .author-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+      background: var(--deep-purple);
+    }
+    .author-info h4 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .author-info p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #9990b0;
+    }
+    .pricing {
+      /* Fundo com a imagem de tracking shot e overlay */
+      background: url('https://i.imgur.com/193j6jD.jpg') center center/cover, var(--black);
+      background-blend-mode: multiply;
+      padding: 6rem 0;
+      position: relative;
+    }
+    .pricing:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(5px);
+      opacity: 0.15;
+      z-index: 0;
+    }
+    .pricing-box {
+      background: rgba(24, 16, 40, 0.8);
+      border-radius: 15px;
+      padding: 3rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(76, 28, 153, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+    .pricing-header {
+      margin-bottom: 2rem;
+    }
+    .pricing-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .price {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--neon-pink);
+      text-shadow: var(--neon-pink-glow);
+    }
+    .price-range {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .pricing-features {
+      margin-bottom: 2.5rem;
+      text-align: left;
+    }
+    .pricing-features ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .pricing-features li {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+    }
+    .pricing-features li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--neon-pink);
+    }
+    .pricing-cta {
+      margin-top: 2rem;
+    }
+    .guarantee {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: rgba(255, 44, 238, 0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .guarantee h3 {
+      margin-bottom: 1rem;
+      color: var(--neon-pink);
+    }
+    /* =================== CTA Section =================== */
+    .cta {
+      text-align: center;
+      padding: 8rem 0;
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .cta p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #d2d2e0;
+    }
+    .cta .btn {
+      padding: 1.2rem 3rem;
+    }
+    .cta-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      z-index: 1;
+    }
+    .cta-bg:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, var(--purple) 0%, transparent 70%);
+      animation: pulse 10s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 0.2; }
+      100% { transform: scale(0.8); opacity: 0.5; }
+    }
+    /* =================== Footer =================== */
+    footer {
+      background: var(--black);
+      padding: 4rem 0 2rem;
+      position: relative;
+    }
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--neon-pink), transparent);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .footer-col h3 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-col ul li {
+      margin-bottom: 0.8rem;
+    }
+    .footer-col ul li a {
+      color: #9990b0;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-col ul li a:hover {
+      color: var(--neon-pink);
+    }
+    /* Seção Social Icons no Footer */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .social-icons a {
+      color: var(--white);
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: var(--neon-pink);
+    }
+    .social-icons svg {
+      width: 24px;
+      height: 24px;
+    }
+    /* Logo no Footer */
+    .footer-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .footer-logo img {
+      width: 60px;
+      height: auto;
+      margin-right: 10px;
+    }
+    .footer-logo span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      color: #6b6680;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(76, 28, 153, 0.2);
+    }
+    /* =================== Animações =================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .glitch {
+      position: relative;
+      animation: glitch 5s infinite;
+    }
+    @keyframes glitch {
+      0% { text-shadow: var(--neon-pink-glow); }
+      1% { text-shadow: none; }
+      2% { text-shadow: var(--neon-pink-glow); }
+      3% { text-shadow: none; }
+      4% { text-shadow: var(--neon-pink-glow); }
+      5% { text-shadow: none; }
+      6% { text-shadow: var(--neon-pink-glow); }
+      100% { text-shadow: var(--neon-pink-glow); }
+    }
+    /* =================== Agent Avatar =================== */
+    .agent-avatar {
+      width: 280px;
+      height: 280px;
+      background: url('https://i.imgur.com/DjXy15N.jpg') center center/cover;
+      border-radius: 50%;
+      margin: 0 auto 2rem;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid var(--neon-pink);
+      box-shadow: 0 0 25px rgba(255, 44, 238, 0.5);
+    }
+    .agent-avatar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, transparent, rgba(76, 28, 153, 0.6));
+      z-index: 1;
+    }
+    .agent-avatar::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, var(--neon-pink), transparent);
+      animation: rotate 4s linear infinite;
+      z-index: 0;
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .agent-avatar img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* =================== Floating Elements =================== */
+    .float-element {
+      position: absolute;
+      background: rgba(76, 28, 153, 0.1);
+      border: 1px solid rgba(255, 44, 238, 0.2);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(255, 44, 238, 0.2);
+      z-index: 0;
+      backdrop-filter: blur(5px);
+    }
+    .float-1 {
+      width: 100px;
+      height: 100px;
+      top: 20%;
+      left: 10%;
+      animation: float 8s ease-in-out infinite;
+    }
+    .float-2 {
+      width: 150px;
+      height: 150px;
+      top: 60%;
+      right: 10%;
+      animation: float 12s ease-in-out infinite;
+    }
+    .float-3 {
+      width: 80px;
+      height: 80px;
+      bottom: 10%;
+      left: 20%;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+    /* =================== Future Vision Section =================== */
+    .future-vision {
+      padding: 6rem 0;
+      /* Fundo com Business Shot e overlay */
+      background: url('https://i.imgur.com/2j0qtUk.jpg') center center/cover, var(--black);
+      background-blend-mode: overlay;
+      position: relative;
+      overflow: hidden;
+    }
+    .future-vision::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(76, 28, 153, 0.2), transparent 70%);
+      z-index: 0;
+    }
+    .vision-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .vision-item {
+      background: rgba(24, 16, 40, 0.6);
+      border-radius: 10px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(76, 28, 153, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .vision-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(76, 28, 153, 0.3);
+    }
+    .vision-item h3 {
+      color: var(--neon-pink);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .vision-item p {
+      color: #d2d2e0;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: var(--grad-purple);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+      }
+      nav ul.active {
+        display: block;
+      }
+      nav ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+      }
+      .hamburger {
+        display: flex;
+      }
+      /* Ajustes de tipografia para mobile */
+      h1 { font-size: 2.5rem; }
+      .slogan { font-size: 1.2rem; }
+      .section { padding: 60px 0; }
+      .vision-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header com Logo, Menu e Hamburger -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="header-logo">
+          <img src="https://i.imgur.com/a2pmnXo.png" alt="ALEPHANT Logo">
+          <div class="logo-text">ALEPHANT<span>.ONE</span></div>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#pricing">Investimento</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Hero Section com efeito parallax simples -->
+  <section class="hero">
+    <div class="float-element float-1"></div>
+    <div class="float-element float-2"></div>
+    <div class="float-element float-3"></div>
+    <div class="container">
+      <div class="hero-content fade-in">
+        <p class="tagline glitch">O Novo Avatar da Sua Marca</p>
+        <h1>ALEPHANT<span>.ONE</span></h1>
+        <p class="slogan">Aceleramos Negócios. Desaceleramos Pessoas.</p>
+        <!-- Botão de agendamento para WhatsApp -->
+        <a href="https://wa.me/5511975315111?text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+estrat%C3%A9gica!" target="_blank" class="btn">Agende uma Reunião Estratégica</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Seção Sobre -->
+  <section id="about" class="section section-dark">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>E SE A SUA MARCA PUDESSE FALAR POR SI?</h2>
+      </div>
+      <div class="fade-in" style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem;">
+        <p>
+          Não estamos falando de um chatbot.<br>
+          Estamos falando de uma <span class="text-highlight">presença viva</span>. Um agente que representa sua marca como um verdadeiro <span class="text-highlight">embaixador digital</span> — que <span class="text-highlight">comunica com autenticidade</span>, <span class="text-highlight">resolve com inteligência</span> e <span class="text-highlight">conecta com profundidade</span>.<br><br>
+          É a sua essência, amplificada por IA.
+        </p>
+      </div>
+      <div class="fade-in">
+        <!-- Agent Avatar usando a imagem Photorealistic Cinematic Close-Up -->
+        <div class="agent-avatar">
+          <img src="https://i.imgur.com/DjXy15N.jpg" alt="Avatar Alephant">
+        </div>
+        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 3rem;">A EXPERIÊNCIA ALEPHANT.ONE</h3>
+        <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 4rem;">
+          Construímos o <span class="text-highlight">avatar vivo da sua empresa</span>: um agente treinado com sua identidade, narrativa, tom de voz e visão de futuro. Ele atende, vende, aprende e evolui — como se fosse você.
+        </p>
+      </div>
+      <div class="fade-in">
+        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 2rem;">O MUNDO MUDOU. SUA MARCA TAMBÉM PRECISA MUDAR.</h3>
+        <div class="grid">
+          <div class="card">
+            <div class="card-icon">📍</div>
+            <h3>Clientes querem tudo, agora.</h3>
+            <p>A imediatismo transforma a expectativa do cliente. Seu negócio precisa estar presente 24/7 com respostas perfeitas.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📍</div>
+            <h3>Chatbots genéricos quebram confiança.</h3>
+            <p>Soluções pré-fabricadas frustram clientes e mancham sua reputação com experiências impessoais.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📍</div>
+            <h3>Soluções rasas custam caro.</h3>
+            <p>Em tempo, energia e reputação. Cada interação perdida é uma oportunidade para a concorrência.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Seção Serviços -->
+  <section id="services" class="section section-purple">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>A DIFERENÇA ALEPHANT</h2>
+      </div>
+      <div class="grid fade-in">
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Narrativa &amp; Copy Estratégico</h3>
+          <p>Sua marca fala com verdade, empatia e poder de conversão. Cada palavra é pensada para refletir sua essência.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔧</div>
+          <h3>Implementação Inteligente</h3>
+          <p>Foco em problemas reais e resultados mensuráveis desde o início, sem desperdício de recursos.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h3>Evolução Contínua</h3>
+          <p>Seu agente aprende com cada interação e melhora a performance dia após dia. Um ativo que se valoriza com o tempo.</p>
+        </div>
+      </div>
+      <div class="fade-in" style="margin-top: 5rem;">
+        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 2rem;">TIPOS DE AGENTES ALEPHANT.ONE</h3>
+        <div class="grid">
+          <div class="card">
+            <div class="card-icon">🌀</div>
+            <h3>Atendimento Premium</h3>
+            <p>Encantamento imediato, com presença autêntica. Transforma cada interação em uma experiência memorável.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📡</div>
+            <h3>Suporte Estratégico</h3>
+            <p>Soluções complexas com um toque humano e confiável, eliminando fricções em cada etapa.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>Pesquisa Conversacional</h3>
+            <p>Transforme formulários em diálogos e feedback em inteligência, gerando insights acionáveis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Seção Future Vision -->
+  <section class="future-vision">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>TRANSFORMAMOS EMPRESAS EM NEGÓCIOS DO FUTURO</h2>
+      </div>
+      <p class="fade-in" style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem;">
+        Você não está só criando um assistente. Está instalando um <span class="text-highlight">novo centro de comunicação, inteligência e presença digital</span>.<br><br>
+        Está criando o <span class="text-highlight">negócio do futuro</span>, agora.
+      </p>
+      <div class="vision-grid fade-in">
+        <div class="vision-item">
+          <h3>Você dormindo. Seu agente vendendo.</h3>
+          <p>Acorde e descubra que seu agente fechou vendas enquanto você repousava – o sonho do empreendedor realizado.</p>
+        </div>
+        <div class="vision-item">
+          <h3>Você em paz. Seu negócio acelerando.</h3>
+          <p>Elimine a pressão de estar sempre disponível; seu agente mantém o ritmo enquanto você se concentra no essencial.</p>
+        </div>
+        <div class="vision-item">
+          <h3>Você livre. Sua marca viva.</h3>
+          <p>Liberdade para crescer e expandir enquanto seu agente mantém a consistência da comunicação em todos os pontos.</p>
+        </div>
+        <div class="vision-item">
+          <h3>Você estratégico. Seu agente operacional.</h3>
+          <p>Dedique-se ao planejamento de longo prazo enquanto seu agente cuida das interações diárias com excelência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Seção Pricing -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <div class="pricing-box fade-in">
+        <div class="pricing-header">
+          <h2>EXPERIÊNCIA ALEPHANT.ONE</h2>
+          <div class="price">Investimento</div>
+          <div class="price-range">R$ 28.000 a R$ 78.000</div>
+          <p><em>(Definido com base na complexidade e potencial do seu negócio)</em></p>
+        </div>
+        <div class="pricing-features">
+          <ul>
+            <li>Diagnóstico estratégico das interações críticas</li>
+            <li>Storytelling exclusivo da marca</li>
+            <li>Copy persuasivo e conversacional</li>
+            <li>Roteiros treinados em até 100 cenários reais</li>
+            <li>Implementação personalizada em até 2 semanas</li>
+            <li>1 mês de evolução e ajustes incluídos</li>
+            <li>Relatórios com insights estratégicos</li>
+            <li>Recorrência mensal: R$ 3.000 a R$ 4.000</li>
+          </ul>
+        </div>
+        <div class="guarantee">
+          <h3>GARANTIA DE EXCELÊNCIA</h3>
+          <p>Se em 60 dias seu agente não encantar, otimizar ou vender como esperado, faremos uma reimplementação estratégica completa — <strong>sem custo extra.</strong></p>
+        </div>
+        <div class="pricing-cta">
+          <!-- Botão para WhatsApp -->
+          <a href="https://wa.me/5511975315111?text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+estrat%C3%A9gica!" target="_blank" class="btn">Agende uma Reunião Estratégica</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Seção CTA -->
+  <section id="contact" class="cta">
+    <div class="cta-bg"></div>
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2>PRONTO PARA O PRÓXIMO NÍVEL?</h2>
+        <p>Agende uma Reunião Estratégica e descubra como um agente ALEPHANT.ONE pode transformar a comunicação, o tempo e o futuro da sua empresa.</p>
+        <!-- Botão para WhatsApp -->
+        <a href="https://wa.me/5511975315111?text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+estrat%C3%A9gica!" target="_blank" class="btn">Agende Agora</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <!-- Logo no Footer -->
+      <div class="footer-logo">
+        <img src="https://i.imgur.com/a2pmnXo.png" alt="ALEPHANT Logo">
+        <span>ALEPHANT.ONE</span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Empresa</h3>
+          <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#pricing">Investimento</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Agentes</h3>
+          <ul>
+            <li><a href="#">Atendimento Premium</a></li>
+            <li><a href="#">Suporte Estratégico</a></li>
+            <li><a href="#">Pesquisa Conversacional</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Recursos</h3>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Estudos de Caso</a></li>
+            <li><a href="#">Suporte</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contato</h3>
+          <ul>
+            <li><a href="mailto:contato@alephant.one">admin@alephant.ai</a></li>
+            <li><a href="tel:+5511975315111">+55 11 97531-5111</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/alephant.ai/" target="_blank" aria-label="Instagram">
+          <!-- Ícone Instagram -->
+          <svg role="img" viewBox="0 0 24 24" fill="currentColor">
+            <title>Instagram</title>
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608C4.515 2.495 5.782 2.225 7.148 2.163 8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.736 0 8.332.012 7.052.07 5.771.127 4.683.412 3.758 1.337 2.833 2.262 2.548 3.35 2.49 4.632 2.432 5.911 2.42 6.315 2.42 9.579s.012 3.668.07 4.947c.058 1.282.343 2.37 1.268 3.295.925.925 2.012 1.21 3.295 1.268 1.279.058 1.683.07 4.947.07s3.668-.012 4.947-.07c1.282-.058 2.37-.343 3.295-1.268.925-.925 1.21-2.012 1.268-3.295.058-1.279.07-1.683.07-4.947s-.012-3.668-.07-4.947c-.058-1.282-.343-2.37-1.268-3.295C19.37.412 18.283.127 17.001.07 15.722.012 15.318 0 12 0z"/>
+            <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.141a3.979 3.979 0 110-7.957 3.979 3.979 0 010 7.957z"/>
+            <circle cx="18.406" cy="5.594" r="1.44"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/rodrigofaerman/" target="_blank" aria-label="LinkedIn">
+          <!-- Ícone LinkedIn -->
+          <svg role="img" viewBox="0 0 24 24" fill="currentColor">
+            <title>LinkedIn</title>
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.024-3.036-1.85-3.036-1.851 0-2.134 1.444-2.134 2.939v5.666H9.355V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.372-1.85 3.605 0 4.27 2.372 4.27 5.456v6.285zM5.337 7.433a2.062 2.062 0 110-4.124 2.062 2.062 0 010 4.124zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+     
+      <div class="copyright">
+        &copy; 2025 ALEPHANT.ONE | Todos os direitos reservados
+      </div>
+    </div>
+  </footer>
+  
+  <!-- =================== Scripts =================== -->
+  <script>
+    // Menu Hamburger Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    
+    // Efeito fade-in com IntersectionObserver
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      fadeElements.forEach(el => observer.observe(el));
+    });
+
+    // Efeito Parallax simples na hero section
+    window.addEventListener('scroll', function() {
+      const scrollPos = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      hero.style.backgroundPositionY = -(scrollPos * 0.5) + 'px';
+    });
+  </script>
+</body>
+</html>
