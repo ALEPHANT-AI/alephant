@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALEPHANT.ONE | O Novo Avatar da Sua Marca</title>
+  <title data-i18n="page.title">ALEPHANT.ONE | O Novo Avatar da Sua Marca</title>
   <!-- Fonte Moderna Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -43,7 +43,7 @@
       padding: 0 20px;
     }
     
-    /* =================== Header & Navegação =================== */
+    /* =================== Header & Navigation =================== */
     header {
       background: var(--grad-purple);
       padding: 1rem 0.5rem;
@@ -58,7 +58,7 @@
       justify-content: space-between;
       align-items: center;
     }
-    /* Logo com imagem no Header */
+    /* Área esquerda: Logo */
     .header-logo {
       display: flex;
       align-items: center;
@@ -78,9 +78,18 @@
       color: var(--neon-pink);
       text-shadow: var(--neon-pink-glow);
     }
+    /* Área direita: Navigation + Language Switcher */
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+    nav {
+      margin-right: 20px;
+    }
     nav ul {
       display: flex;
       list-style: none;
+      align-items: center;
     }
     nav ul li {
       margin-left: 2rem;
@@ -95,11 +104,31 @@
       color: var(--neon-pink);
       text-shadow: var(--neon-pink-glow);
     }
+    /* Language Switcher separado */
+    .lang-switcher {
+      display: flex;
+      gap: 8px;
+    }
+    .lang-switcher button {
+      background: transparent;
+      border: 1px solid var(--white);
+      color: var(--white);
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .lang-switcher button.active,
+    .lang-switcher button:hover {
+      background: var(--neon-pink);
+      border-color: var(--neon-pink);
+      color: var(--white);
+    }
     /* Menu Hamburger para Mobile */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
+      margin-left: 1rem;
     }
     .hamburger div {
       width: 25px;
@@ -115,7 +144,6 @@
       display: flex;
       align-items: center;
       background: url('https://i.imgur.com/ck2gkBx.jpg') center center/cover;
-      /* Overlay ajustado para deixar a imagem mais visível */
       background-blend-mode: overlay;
       background-color: rgba(10,10,12,0.7);
       overflow: hidden;
@@ -125,8 +153,7 @@
       content: '';
       position: absolute;
       top: 0; left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       background: radial-gradient(circle at 50% 50%, transparent 15%, var(--black) 85%);
       z-index: 1;
     }
@@ -224,7 +251,7 @@
       background: var(--grad-purple);
       position: relative;
     }
-    /* Overlay de textura na seção de Serviços – usando wmUx5gD.png */
+    /* Overlay de textura sutil para a seção de Serviços – usando wmUx5gD.png */
     .section-purple::after {
       content: '';
       position: absolute;
@@ -303,407 +330,6 @@
     .card p {
       color: #d2d2e0;
       margin-bottom: 1.5rem;
-    }
-    
-    /* =================== Seção de Agentes =================== */
-    /* Nova seção para apresentar os 3 agentes com fotos personalizadas */
-    #agents {
-      padding: 100px 0;
-      background-color: var(--black);
-    }
-    #agents .section-title {
-      margin-bottom: 3rem;
-    }
-    .agent-card {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(24,16,40,0.7);
-      border-radius: 10px;
-      border: 1px solid rgba(76,28,153,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
-    .agent-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(76,28,153,0.3);
-    }
-    .agent-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 1rem;
-      border: 3px solid var(--neon-pink);
-    }
-    
-    /* =================== Future Vision Section =================== */
-    .future-vision {
-      padding: 6rem 0;
-      background: url('https://i.imgur.com/2j0qtUk.jpg') center center/cover, var(--black);
-      background-blend-mode: overlay;
-      position: relative;
-      overflow: hidden;
-    }
-    .future-vision::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: radial-gradient(circle at center, rgba(76,28,153,0.15), transparent 70%);
-      z-index: 0;
-    }
-    .vision-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-    .vision-item {
-      background: rgba(24,16,40,0.6);
-      border-radius: 10px;
-      padding: 2rem;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(76,28,153,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .vision-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(76,28,153,0.3);
-    }
-    .vision-item h3 {
-      color: var(--neon-pink);
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-    .vision-item p {
-      color: #d2d2e0;
-      line-height: 1.6;
-    }
-    
-    /* =================== Seção Pricing =================== */
-    .pricing {
-      background: url('https://i.imgur.com/193j6jD.png') center center/cover, var(--black);
-      background-blend-mode: multiply;
-      padding: 6rem 0;
-      position: relative;
-    }
-    .pricing:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      filter: blur(5px);
-      opacity: 0.12;
-      z-index: 0;
-    }
-    .pricing-box {
-      background: rgba(24,16,40,0.85);
-      border-radius: 15px;
-      padding: 3rem;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      position: relative;
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(76,28,153,0.3);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-      z-index: 2;
-    }
-    .pricing-header {
-      margin-bottom: 2rem;
-    }
-    .pricing-header h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .price {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--neon-pink);
-      text-shadow: var(--neon-pink-glow);
-    }
-    .price-range {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .pricing-features {
-      margin-bottom: 2.5rem;
-      text-align: left;
-    }
-    .pricing-features ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .pricing-features li {
-      margin-bottom: 1rem;
-      padding-left: 2rem;
-      position: relative;
-    }
-    .pricing-features li:before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--neon-pink);
-    }
-    .pricing-cta {
-      margin-top: 2rem;
-    }
-    .guarantee {
-      margin-top: 2rem;
-      padding: 1.5rem;
-      background: rgba(255,44,238,0.1);
-      border-radius: 10px;
-      text-align: center;
-    }
-    .guarantee h3 {
-      margin-bottom: 1rem;
-      color: var(--neon-pink);
-    }
-    
-    /* =================== CTA Section =================== */
-    .cta {
-      text-align: center;
-      padding: 8rem 0;
-      background: var(--black);
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-content {
-      max-width: 700px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-    .cta h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .cta p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #d2d2e0;
-    }
-    .cta .btn {
-      padding: 1.2rem 3rem;
-    }
-    .cta-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.2;
-      z-index: 1;
-    }
-    .cta-bg:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center, var(--purple) 0%, transparent 70%);
-      animation: pulse 10s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(0.8); opacity: 0.5; }
-      50% { transform: scale(1.2); opacity: 0.2; }
-      100% { transform: scale(0.8); opacity: 0.5; }
-    }
-    
-    /* =================== Footer =================== */
-    footer {
-      background: var(--black);
-      padding: 4rem 0 2rem;
-      position: relative;
-    }
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--neon-pink), transparent);
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-    .footer-col h3 {
-      color: var(--white);
-      margin-bottom: 1.5rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-    .footer-col ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .footer-col ul li {
-      margin-bottom: 0.8rem;
-    }
-    .footer-col ul li a {
-      color: #9990b0;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .footer-col ul li a:hover {
-      color: var(--neon-pink);
-    }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .social-icons a {
-      color: var(--white);
-      transition: color 0.3s;
-    }
-    .social-icons a:hover {
-      color: var(--neon-pink);
-    }
-    .social-icons svg {
-      width: 24px;
-      height: 24px;
-    }
-    .footer-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    .footer-logo img {
-      width: 60px;
-      height: auto;
-      margin-right: 10px;
-    }
-    .footer-logo span {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--white);
-    }
-    .copyright {
-      text-align: center;
-      padding-top: 2rem;
-      color: #6b6680;
-      font-size: 0.9rem;
-      border-top: 1px solid rgba(76,28,153,0.2);
-    }
-    
-    /* =================== Animações e Efeitos =================== */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-in.appear {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .glitch {
-      position: relative;
-      animation: glitch 5s infinite;
-    }
-    @keyframes glitch {
-      0% { text-shadow: var(--neon-pink-glow); }
-      1% { text-shadow: none; }
-      2% { text-shadow: var(--neon-pink-glow); }
-      3% { text-shadow: none; }
-      4% { text-shadow: var(--neon-pink-glow); }
-      5% { text-shadow: none; }
-      6% { text-shadow: var(--neon-pink-glow); }
-      100% { text-shadow: var(--neon-pink-glow); }
-    }
-    
-    /* =================== Agent Avatar =================== */
-    .agent-avatar {
-      width: 280px;
-      height: 280px;
-      background: url('https://i.imgur.com/DjXy15N.jpg') center center/cover;
-      border-radius: 50%;
-      margin: 0 auto 2rem;
-      position: relative;
-      overflow: hidden;
-      border: 2px solid var(--neon-pink);
-      box-shadow: 0 0 25px rgba(255,44,238,0.5);
-    }
-    .agent-avatar::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center, transparent, rgba(76,28,153,0.6));
-      z-index: 1;
-    }
-    .agent-avatar::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: conic-gradient(from 0deg, transparent, var(--neon-pink), transparent);
-      animation: rotate 4s linear infinite;
-      z-index: 0;
-    }
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    .agent-avatar img {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    /* =================== Floating Elements =================== */
-    .float-element {
-      position: absolute;
-      background: rgba(76,28,153,0.1);
-      border: 1px solid rgba(255,44,238,0.2);
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(255,44,238,0.2);
-      z-index: 0;
-      backdrop-filter: blur(5px);
-    }
-    .float-1 {
-      width: 100px;
-      height: 100px;
-      top: 20%;
-      left: 10%;
-      animation: float 8s ease-in-out infinite;
-    }
-    .float-2 {
-      width: 150px;
-      height: 150px;
-      top: 60%;
-      right: 10%;
-      animation: float 12s ease-in-out infinite;
-    }
-    .float-3 {
-      width: 80px;
-      height: 80px;
-      bottom: 10%;
-      left: 20%;
-      animation: float 6s ease-in-out infinite;
-    }
-    @keyframes float {
-      0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(180deg); }
-      100% { transform: translateY(0) rotate(360deg); }
     }
     
     /* =================== Seção Conheça Nossos Agentes =================== */
@@ -999,7 +625,7 @@
       border-top: 1px solid rgba(76,28,153,0.2);
     }
     
-    /* =================== Animações =================== */
+    /* =================== Animações e Efeitos =================== */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -1106,36 +732,6 @@
       100% { transform: translateY(0) rotate(360deg); }
     }
     
-    /* =================== Seção Conheça Nossos Agentes =================== */
-    #agents {
-      padding: 100px 0;
-      background-color: var(--black);
-    }
-    #agents .section-title {
-      margin-bottom: 3rem;
-    }
-    .agent-card {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(24,16,40,0.7);
-      border-radius: 10px;
-      border: 1px solid rgba(76,28,153,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
-    .agent-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(76,28,153,0.3);
-    }
-    .agent-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 1rem;
-      border: 3px solid var(--neon-pink);
-    }
-    
     /* =================== Responsividade =================== */
     @media (max-width: 768px) {
       nav ul {
@@ -1170,23 +766,31 @@
   <header>
     <div class="container">
       <div class="header-content">
+        <!-- Área do Logo -->
         <div class="header-logo">
           <img src="https://i.imgur.com/a2pmnXo.png" alt="ALEPHANT Logo">
-          <div class="logo-text">ALEPHANT<span>.ONE</span></div>
+          <div class="logo-text" data-i18n="header.logo">ALEPHANT<span>.ONE</span></div>
         </div>
-        <div class="hamburger" id="hamburger">
-          <div></div>
-          <div></div>
-          <div></div>
+        <!-- Área direita com Navigation e Language Switcher -->
+        <div class="header-right">
+          <nav>
+            <ul id="nav-menu">
+              <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
+              <li><a href="#services" data-i18n="nav.services">Serviços</a></li>
+              <li><a href="#pricing" data-i18n="nav.pricing">Investimento</a></li>
+              <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
+            </ul>
+          </nav>
+          <div class="lang-switcher">
+            <button id="lang-pt" class="active">PT</button>
+            <button id="lang-en">EN</button>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-        <nav>
-          <ul id="nav-menu">
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#pricing">Investimento</a></li>
-            <li><a href="#contact">Contato</a></li>
-          </ul>
-        </nav>
       </div>
     </div>
   </header>
@@ -1198,11 +802,10 @@
     <div class="float-element float-3"></div>
     <div class="container">
       <div class="hero-content fade-in">
-        <p class="tagline glitch">O Novo Avatar da Sua Marca</p>
-        <h1>ALEPHANT<span>.ONE</span></h1>
-        <p class="slogan">Aceleramos Negócios. Desaceleramos Pessoas.</p>
-        <!-- Botão para WhatsApp -->
-        <a href="https://wa.me/5511975315111?text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+estrat%C3%A9gica!" target="_blank" class="btn">Agende uma Reunião Estratégica</a>
+        <p class="tagline glitch" data-i18n="hero.tagline">O Novo Avatar da Sua Marca</p>
+        <h1 data-i18n="hero.title">ALEPHANT<span>.ONE</span></h1>
+        <p class="slogan" data-i18n="hero.slogan">Aceleramos Negócios. Desaceleramos Pessoas.</p>
+        <a href="https://wa.me/5511975315111?text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+estrat%C3%A9gica!" target="_blank" class="btn" data-i18n="hero.button">Agende uma Reunião Estratégica</a>
       </div>
     </div>
   </section>
@@ -1211,9 +814,9 @@
   <section id="about" class="section section-dark">
     <div class="container">
       <div class="section-title fade-in">
-        <h2>E SE A SUA MARCA PUDESSE FALAR POR SI?</h2>
+        <h2 data-i18n="about.title">E SE A SUA MARCA PUDESSE FALAR POR SI?</h2>
       </div>
-      <div class="fade-in" style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem;">
+      <div class="fade-in" style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem;" data-i18n="about.text">
         <p>
           Não estamos falando de um chatbot.<br>
           Estamos falando de uma <span class="text-highlight">presença viva</span>. Um agente que representa sua marca como um verdadeiro <span class="text-highlight">embaixador digital</span> — que <span class="text-highlight">comunica com autenticidade</span>, <span class="text-highlight">resolve com inteligência</span> e <span class="text-highlight">conecta com profundidade</span>.<br><br>
@@ -1224,28 +827,28 @@
         <div class="agent-avatar">
           <img src="https://i.imgur.com/DjXy15N.jpg" alt="Avatar Alephant" loading="lazy">
         </div>
-        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 3rem;">A EXPERIÊNCIA ALEPHANT.ONE</h3>
-        <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 4rem;">
+        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 3rem;" data-i18n="about.heading">A EXPERIÊNCIA ALEPHANT.ONE</h3>
+        <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 4rem;" data-i18n="about.text2">
           Construímos o <span class="text-highlight">avatar vivo da sua empresa</span>: um agente treinado com sua identidade, narrativa, tom de voz e visão de futuro. Ele atende, vende, aprende e evolui — como se fosse você.
         </p>
       </div>
       <div class="fade-in">
-        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 2rem;">O MUNDO MUDOU. SUA MARCA TAMBÉM PRECISA MUDAR.</h3>
+        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 2rem;" data-i18n="about.heading2">O MUNDO MUDOU. SUA MARCA TAMBÉM PRECISA MUDAR.</h3>
         <div class="grid">
           <div class="card">
             <div class="card-icon">📍</div>
-            <h3>Clientes querem tudo, agora.</h3>
-            <p>A imediatismo transforma a expectativa do cliente. Seu negócio precisa estar presente 24/7 com respostas perfeitas.</p>
+            <h3 data-i18n="about.card1.title">Clientes querem tudo, agora.</h3>
+            <p data-i18n="about.card1.text">A instantaneidade transforma a expectativa do cliente. Seu negócio precisa estar disponível 24/7 com respostas perfeitas.</p>
           </div>
           <div class="card">
             <div class="card-icon">📍</div>
-            <h3>Chatbots genéricos quebram confiança.</h3>
-            <p>Soluções pré-fabricadas frustram clientes e mancham sua reputação com experiências impessoais.</p>
+            <h3 data-i18n="about.card2.title">Chatbots genéricos quebram confiança.</h3>
+            <p data-i18n="about.card2.text">Soluções pré-fabricadas frustram clientes e mancham sua reputação com experiências impessoais.</p>
           </div>
           <div class="card">
             <div class="card-icon">📍</div>
-            <h3>Soluções rasas custam caro.</h3>
-            <p>Em tempo, energia e reputação. Cada interação perdida é uma oportunidade para a concorrência.</p>
+            <h3 data-i18n="about.card3.title">Soluções rasas custam caro.</h3>
+            <p data-i18n="about.card3.text">Tempo, energia e reputação. Cada interação perdida é uma oportunidade para a concorrência.</p>
           </div>
         </div>
       </div>
@@ -1256,23 +859,41 @@
   <section id="services" class="section section-purple">
     <div class="container">
       <div class="section-title fade-in">
-        <h2>A DIFERENÇA ALEPHANT</h2>
+        <h2 data-i18n="services.title">A DIFERENÇA ALEPHANT</h2>
       </div>
       <div class="grid fade-in">
         <div class="card">
           <div class="card-icon">🎯</div>
-          <h3>Narrativa &amp; Copy Estratégico</h3>
-          <p>Sua marca fala com verdade, empatia e poder de conversão. Cada palavra é pensada para refletir sua essência.</p>
+          <h3 data-i18n="services.card1.title">Narrativa &amp; Copy Estratégico</h3>
+          <p data-i18n="services.card1.text">Sua marca fala com autenticidade, empatia e poder de conversão. Cada palavra é cuidadosamente pensada para refletir sua essência.</p>
         </div>
         <div class="card">
           <div class="card-icon">🔧</div>
-          <h3>Implementação Inteligente</h3>
-          <p>Foco em problemas reais e resultados mensuráveis desde o início, sem desperdício de recursos.</p>
+          <h3 data-i18n="services.card2.title">Implementação Inteligente</h3>
+          <p data-i18n="services.card2.text">Foco em problemas reais e resultados mensuráveis desde o início — sem desperdício de recursos.</p>
         </div>
         <div class="card">
           <div class="card-icon">🧠</div>
-          <h3>Evolução Contínua</h3>
-          <p>Seu agente aprende com cada interação e melhora a performance dia após dia. Um ativo que se valoriza com o tempo.</p>
+          <h3 data-i18n="services.card3.title">Evolução Contínua</h3>
+          <p data-i18n="services.card3.text">Seu agente aprende com cada interação e melhora a performance dia após dia — um verdadeiro ativo que cresce em valor.</p>
+        </div>
+      </div>
+      <div class="divider fade-in"></div>
+      <div class="grid fade-in">
+        <div class="card">
+          <div class="card-icon">🌀</div>
+          <h3 data-i18n="services.card4.title">Atendimento Premium</h3>
+          <p data-i18n="services.card4.text">Um agente sofisticado que oferece uma experiência única e imediata, encantando clientes com respostas personalizadas.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📡</div>
+          <h3 data-i18n="services.card5.title">Suporte Estratégico</h3>
+          <p data-i18n="services.card5.text">Combina tecnologia e empatia para oferecer soluções estratégicas confiáveis, garantindo eficiência e tranquilidade.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3 data-i18n="services.card6.title">Pesquisa Conversacional</h3>
+          <p data-i18n="services.card6.text">Transforma cada diálogo em insights valiosos que impulsionam o crescimento real da sua marca.</p>
         </div>
       </div>
     </div>
@@ -1282,29 +903,29 @@
   <section id="agents" class="section section-dark">
     <div class="container">
       <div class="section-title fade-in">
-        <h2>CONHEÇA NOSSOS AGENTES</h2>
+        <h2 data-i18n="agents.title">MEET OUR AGENTS</h2>
       </div>
       <div class="grid fade-in">
         <div class="card agent-card">
           <img src="https://media.discordapp.net/attachments/1290772229189009470/1310386023150260388/taypuri_59493_sophisticated_Arcane-style_close-up_of_young_indi_0269aa42-bfe2-40eb-86be-c284cd8fc50c.png?ex=67f8fc55&is=67f7aad5&hm=9b4259775376dc76805b782076e1740e110ff14ba1918af28fa7382ab6ea1d80&=&format=webp&quality=lossless&width=1436&height=1436" 
-               alt="Atendimento Premium" 
+               alt="Premium Agent" 
                class="agent-photo" loading="lazy">
-          <h3>Atendimento Premium</h3>
-          <p>Um agente sofisticado que oferece uma experiência única e imediata, encantando clientes com respostas personalizadas.</p>
+          <h3 data-i18n="agents.card1.title">Premium Support</h3>
+          <p data-i18n="agents.card1.text">An elegant agent delivering immediate, high-end interactions.</p>
         </div>
         <div class="card agent-card">
           <img src="https://media.discordapp.net/attachments/1290772229189009470/1310385939738001450/taypuri_59493_serene_Arcane-style_portrait_of_young_tech_mystic_2aacfcab-e434-45f9-a3a3-5cd07368c461.png?ex=67f8fc41&is=67f7aac1&hm=e573e44ff1416a98f30e7044198d9723bd648d26f99143d2380370d1eabd45a5&=&format=webp&quality=lossless&width=1436&height=1436" 
-               alt="Suporte Estratégico" 
+               alt="Strategic Support" 
                class="agent-photo" loading="lazy">
-          <h3>Suporte Estratégico</h3>
-          <p>Este agente une tecnologia e empatia para oferecer soluções estratégicas, garantindo tranquilidade e eficácia.</p>
+          <h3 data-i18n="agents.card2.title">Strategic Support</h3>
+          <p data-i18n="agents.card2.text">Merging tech and empathy to offer reliable strategic solutions.</p>
         </div>
         <div class="card agent-card">
           <img src="https://media.discordapp.net/attachments/1290772229189009470/1359994386724946012/taypuri_59493_Photorealistic_profile_portrait_of_strategic_prob_4d48e0c3-39ab-4d2b-a9b3-a3bcadfb6d27.png?ex=67f980f9&is=67f82f79&hm=0dbbc6b2f6058a96d3ecfcbde58c724fe11a739363a97f0912d728f0e0eff6ca&=&format=webp&quality=lossless&width=1436&height=1436" 
-               alt="Pesquisa Conversacional" 
+               alt="Conversational Research" 
                class="agent-photo" loading="lazy">
-          <h3>Pesquisa Conversacional</h3>
-          <p>Transforma cada diálogo em insights valiosos, convertendo feedback em crescimento real para sua marca.</p>
+          <h3 data-i18n="agents.card3.title">Conversational Research</h3>
+          <p data-i18n="agents.card3.text">Turning every conversation into valuable insights that drive growth.</p>
         </div>
       </div>
     </div>
@@ -1314,28 +935,28 @@
   <section class="future-vision">
     <div class="container">
       <div class="section-title fade-in">
-        <h2>TRANSFORMAMOS EMPRESAS EM NEGÓCIOS DO FUTURO</h2>
+        <h2 data-i18n="future.title">TRANSFORMING BUSINESSES INTO FUTURE-READY ENTERPRISES</h2>
       </div>
-      <p class="fade-in" style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem;">
-        Você não está só criando um assistente. Está instalando um <span class="text-highlight">novo centro de comunicação, inteligência e presença digital</span>.<br><br>
-        Está criando o <span class="text-highlight">negócio do futuro</span>, agora.
+      <p class="fade-in" style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem;" data-i18n="future.text">
+        You're not just creating an assistant. You're installing a new hub of communication, intelligence, and digital presence.<br><br>
+        You're building the business of the future, now.
       </p>
       <div class="vision-grid fade-in">
         <div class="vision-item">
-          <h3>Você dormindo. Seu agente vendendo.</h3>
-          <p>Acorde e descubra que seu agente fechou vendas enquanto você repousava – o sonho do empreendedor realizado.</p>
+          <h3 data-i18n="future.vision1.title">While You Sleep, Your Agent Sells.</h3>
+          <p data-i18n="future.vision1.text">Wake up to find your agent has closed deals—a dream come true for every entrepreneur.</p>
         </div>
         <div class="vision-item">
-          <h3>Você em paz. Seu negócio acelerando.</h3>
-          <p>Elimine a pressão de estar sempre disponível; seu agente mantém o ritmo enquanto você se concentra no essencial.</p>
+          <h3 data-i18n="future.vision2.title">Peace for You, Acceleration for Your Business.</h3>
+          <p data-i18n="future.vision2.text">Eliminate the pressure to always be available; your agent drives progress while you focus on what matters.</p>
         </div>
         <div class="vision-item">
-          <h3>Você livre. Sua marca viva.</h3>
-          <p>Liberdade para crescer e expandir enquanto seu agente mantém a consistência da comunicação em todos os pontos.</p>
+          <h3 data-i18n="future.vision3.title">Freedom for You, A Vibrant Brand.</h3>
+          <p data-i18n="future.vision3.text">Grow and expand while your agent consistently maintains your brand’s communication.</p>
         </div>
         <div class="vision-item">
-          <h3>Você estratégico. Seu agente operacional.</h3>
-          <p>Dedique-se ao planejamento de longo prazo enquanto seu agente cuida das interações diárias com excelência.</p>
+          <h3 data-i18n="future.vision4.title">Strategy for You, Seamless Operations.</h3>
+          <p data-i18n="future.vision4.text">Devote your time to long-term planning while your agent handles daily engagements flawlessly.</p>
         </div>
       </div>
     </div>
@@ -1346,29 +967,29 @@
     <div class="container">
       <div class="pricing-box fade-in">
         <div class="pricing-header">
-          <h2>EXPERIÊNCIA ALEPHANT.ONE</h2>
-          <div class="price">Investimento</div>
-          <div class="price-range">R$ 28.000 a R$ 78.000</div>
-          <p><em>(Definido com base na complexidade e potencial do seu negócio)</em></p>
+          <h2 data-i18n="pricing.title">EXPERIÊNCIA ALEPHANT.ONE</h2>
+          <div class="price" data-i18n="pricing.price">Investimento</div>
+          <div class="price-range" data-i18n="pricing.range">R$ 28,000 a R$ 78,000</div>
+          <p><em data-i18n="pricing.note">(Definido com base na complexidade e potencial do seu negócio)</em></p>
         </div>
         <div class="pricing-features">
           <ul>
-            <li>Diagnóstico estratégico das interações críticas</li>
-            <li>Storytelling exclusivo da marca</li>
-            <li>Copy persuasivo e conversacional</li>
-            <li>Roteiros treinados em até 100 cenários reais</li>
-            <li>Implementação personalizada em até 2 semanas</li>
-            <li>1 mês de evolução e ajustes incluídos</li>
-            <li>Relatórios com insights estratégicos</li>
-            <li>Recorrência mensal: R$ 3.000 a R$ 4.000</li>
+            <li data-i18n="pricing.feature1">Diagnóstico estratégico das interações críticas</li>
+            <li data-i18n="pricing.feature2">Storytelling exclusivo da marca</li>
+            <li data-i18n="pricing.feature3">Copy persuasivo e conversacional</li>
+            <li data-i18n="pricing.feature4">Roteiros treinados em até 100 cenários reais</li>
+            <li data-i18n="pricing.feature5">Implementação personalizada em até 2 semanas</li>
+            <li data-i18n="pricing.feature6">1 mês de otimização incluso</li>
+            <li data-i18n="pricing.feature7">Relatórios com insights estratégicos</li>
+            <li data-i18n="pricing.feature8">Recorrência mensal: R$ 3,000 a R$ 4,000</li>
           </ul>
         </div>
         <div class="guarantee">
-          <h3>GARANTIA DE EXCELÊNCIA</h3>
-          <p>Se em 60 dias seu agente não encantar, otimizar ou vender como esperado, faremos uma reimplementação estratégica completa — <strong>sem custo extra.</strong></p>
+          <h3 data-i18n="pricing.guaranteeTitle">GARANTIA DE EXCELÊNCIA</h3>
+          <p data-i18n="pricing.guaranteeText">Se em 60 dias seu agente não encantar, otimizar ou vender como esperado, faremos uma reimplementação estratégica completa — sem custo extra.</p>
         </div>
         <div class="pricing-cta">
-          <a href="https://wa.me/5511975315111?text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+estrat%C3%A9gica!" target="_blank" class="btn">Agende uma Reunião Estratégica</a>
+          <a href="https://wa.me/5511975315111?text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+estrat%C3%A9gica!" target="_blank" class="btn" data-i18n="pricing.button">Agende uma Reunião Estratégica</a>
         </div>
       </div>
     </div>
@@ -1379,9 +1000,9 @@
     <div class="cta-bg"></div>
     <div class="container">
       <div class="cta-content fade-in">
-        <h2>PRONTO PARA O PRÓXIMO NÍVEL?</h2>
-        <p>Agende uma Reunião Estratégica e descubra como um agente ALEPHANT.ONE pode transformar a comunicação, o tempo e o futuro da sua empresa.</p>
-        <a href="https://wa.me/5511975315111?text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+estrat%C3%A9gica!" target="_blank" class="btn">Agende Agora</a>
+        <h2 data-i18n="cta.title">PRONTO PARA O PRÓXIMO NÍVEL?</h2>
+        <p data-i18n="cta.text">Agende uma Reunião Estratégica e descubra como um agente ALEPHANT.ONE pode transformar a comunicação, o tempo e o futuro da sua empresa.</p>
+        <a href="https://wa.me/5511975315111?text=Ol%C3%A1%2C+quero+agendar+uma+reuni%C3%A3o+estrat%C3%A9gica!" target="_blank" class="btn" data-i18n="cta.button">Agende Agora</a>
       </div>
     </div>
   </section>
@@ -1391,7 +1012,7 @@
     <div class="container">
       <div class="footer-logo">
         <img src="https://i.imgur.com/a2pmnXo.png" alt="ALEPHANT Logo">
-        <span>ALEPHANT.ONE</span>
+        <span data-i18n="footer.logo">ALEPHANT.ONE</span>
       </div>
       <div class="social-icons">
         <a href="https://www.instagram.com/alephant.ai/" target="_blank" aria-label="Instagram">
@@ -1411,54 +1032,240 @@
       </div>
       <div class="footer-grid">
         <div class="footer-col">
-          <h3>Empresa</h3>
+          <h3 data-i18n="footer.col1.title">Empresa</h3>
           <ul>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#pricing">Investimento</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="#about" data-i18n="footer.col1.about">Sobre</a></li>
+            <li><a href="#services" data-i18n="footer.col1.services">Serviços</a></li>
+            <li><a href="#pricing" data-i18n="footer.col1.pricing">Investimento</a></li>
+            <li><a href="#contact" data-i18n="footer.col1.contact">Contato</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Agentes</h3>
+          <h3 data-i18n="footer.col2.title">Agentes</h3>
           <ul>
-            <li><a href="#">Atendimento Premium</a></li>
-            <li><a href="#">Suporte Estratégico</a></li>
-            <li><a href="#">Pesquisa Conversacional</a></li>
+            <li><a href="#">Premium Support</a></li>
+            <li><a href="#">Strategic Support</a></li>
+            <li><a href="#">Conversational Research</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Recursos</h3>
+          <h3 data-i18n="footer.col3.title">Recursos</h3>
           <ul>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Estudos de Caso</a></li>
+            <li><a href="#">Case Studies</a></li>
             <li><a href="#">Suporte</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Contato</h3>
+          <h3 data-i18n="footer.col4.title">Contato</h3>
           <ul>
             <li><a href="mailto:admin@alephant.ai">admin@alephant.ai</a></li>
             <li><a href="tel:+5511975315111">+55 11 97531-5111</a></li>
           </ul>
         </div>
       </div>
-      <div class="copyright">
-        &copy; 2025 ALEPHANT.ONE | Todos os direitos reservados
+      <div class="copyright" data-i18n="footer.copyright">
+        © 2025 ALEPHANT.ONE | Todos os direitos reservados
       </div>
     </div>
   </footer>
   
   <!-- =================== Scripts =================== -->
   <script>
-    // Menu Hamburger Toggle
+    // Traduções para PT e EN
+    const translations = {
+      pt: {
+        "page.title": "ALEPHANT.ONE | O Novo Avatar da Sua Marca",
+        "header.logo": "ALEPHANT.ONE",
+        "nav.about": "Sobre",
+        "nav.services": "Serviços",
+        "nav.pricing": "Investimento",
+        "nav.contact": "Contato",
+        "hero.tagline": "O Novo Avatar da Sua Marca",
+        "hero.title": "ALEPHANT.ONE",
+        "hero.slogan": "Aceleramos Negócios. Desaceleramos Pessoas.",
+        "hero.button": "Agende uma Reunião Estratégica",
+        "about.title": "E SE A SUA MARCA PUDESSE FALAR POR SI?",
+        "about.text": "Não estamos falando de um chatbot. Estamos falando de uma presença viva. Um agente que representa sua marca como um verdadeiro embaixador digital — que comunica com autenticidade, resolve com inteligência e conecta com profundidade. É a sua essência, amplificada por IA.",
+        "about.heading": "A EXPERIÊNCIA ALEPHANT.ONE",
+        "about.text2": "Construímos o avatar vivo da sua empresa: um agente treinado com sua identidade, narrativa, tom de voz e visão de futuro. Ele atende, vende, aprende e evolui — como se fosse você.",
+        "about.heading2": "O MUNDO MUDOU. SUA MARCA TAMBÉM PRECISA MUDAR.",
+        "about.card1.title": "Clientes querem tudo, agora.",
+        "about.card1.text": "A instantaneidade transforma a expectativa do cliente. Seu negócio precisa estar disponível 24/7 com respostas perfeitas.",
+        "about.card2.title": "Chatbots genéricos quebram confiança.",
+        "about.card2.text": "Soluções pré-fabricadas frustram clientes e mancham sua reputação com experiências impessoais.",
+        "about.card3.title": "Soluções rasas custam caro.",
+        "about.card3.text": "Tempo, energia e reputação. Cada interação perdida é uma oportunidade para a concorrência.",
+        "services.title": "A DIFERENÇA ALEPHANT",
+        "services.card1.title": "Narrativa & Copy Estratégico",
+        "services.card1.text": "Sua marca fala com autenticidade, empatia e poder de conversão. Cada palavra é cuidadosamente pensada para refletir sua essência.",
+        "services.card2.title": "Implementação Inteligente",
+        "services.card2.text": "Foco em problemas reais e resultados mensuráveis desde o início — sem desperdício de recursos.",
+        "services.card3.title": "Evolução Contínua",
+        "services.card3.text": "Seu agente aprende com cada interação e melhora a performance dia após dia — um verdadeiro ativo que cresce em valor.",
+        "services.card4.title": "Atendimento Premium",
+        "services.card4.text": "Um agente sofisticado que oferece uma experiência única e imediata, encantando clientes com respostas personalizadas.",
+        "services.card5.title": "Suporte Estratégico",
+        "services.card5.text": "Combina tecnologia e empatia para oferecer soluções estratégicas confiáveis, garantindo eficiência e tranquilidade.",
+        "services.card6.title": "Pesquisa Conversacional",
+        "services.card6.text": "Transforma cada diálogo em insights valiosos que impulsionam o crescimento real da sua marca.",
+        "agents.title": "CONHEÇA NOSSOS AGENTES",
+        "agents.card1.title": "Premium Support",
+        "agents.card1.text": "Um agente elegante que oferece interações imediatas de alto nível.",
+        "agents.card2.title": "Strategic Support",
+        "agents.card2.text": "Combinando tecnologia e empatia para soluções estratégicas confiáveis.",
+        "agents.card3.title": "Conversational Research",
+        "agents.card3.text": "Transforma cada conversa em insights valiosos que impulsionam o crescimento.",
+        "future.title": "TRANSFORMANDO EMPRESAS EM NEGÓCIOS PREPARADOS PARA O FUTURO",
+        "future.text": "Você não está apenas criando um assistente. Está instalando um novo centro de comunicação, inteligência e presença digital. Está construindo o negócio do futuro, agora.",
+        "future.vision1.title": "Enquanto você dorme, seu agente vende.",
+        "future.vision1.text": "Acorde e descubra que seu agente fechou negócios – o sonho de todo empreendedor realizado.",
+        "future.vision2.title": "Paz para você, aceleração para seu negócio.",
+        "future.vision2.text": "Elimine a pressão de estar sempre disponível; seu agente impulsiona o progresso enquanto você foca no essencial.",
+        "future.vision3.title": "Liberdade para você, uma marca vibrante.",
+        "future.vision3.text": "Cresça e expanda enquanto seu agente mantém uma comunicação consistente para sua marca.",
+        "future.vision4.title": "Estratégia para você, operações sem atritos.",
+        "future.vision4.text": "Dedique seu tempo ao planejamento de longo prazo enquanto seu agente gerencia os engajamentos diários com excelência.",
+        "pricing.title": "EXPERIÊNCIA ALEPHANT.ONE",
+        "pricing.price": "Investimento",
+        "pricing.range": "R$ 28,000 a R$ 78,000",
+        "pricing.note": "(Definido com base na complexidade e potencial do seu negócio)",
+        "pricing.feature1": "Diagnóstico estratégico das interações críticas",
+        "pricing.feature2": "Storytelling exclusivo da marca",
+        "pricing.feature3": "Copy persuasivo e conversacional",
+        "pricing.feature4": "Roteiros treinados em até 100 cenários reais",
+        "pricing.feature5": "Implementação personalizada em até 2 semanas",
+        "pricing.feature6": "1 mês de otimização incluso",
+        "pricing.feature7": "Relatórios com insights estratégicos",
+        "pricing.feature8": "Recorrência mensal: R$ 3,000 a R$ 4,000",
+        "pricing.guaranteeTitle": "GARANTIA DE EXCELÊNCIA",
+        "pricing.guaranteeText": "Se em 60 dias seu agente não encantar, otimizar ou vender como esperado, faremos uma reimplementação estratégica completa — sem custo extra.",
+        "pricing.button": "Agende uma Reunião Estratégica",
+        "cta.title": "PRONTO PARA O PRÓXIMO NÍVEL?",
+        "cta.text": "Agende uma Reunião Estratégica e descubra como um agente ALEPHANT.ONE pode transformar a comunicação, o tempo e o futuro da sua empresa.",
+        "cta.button": "Agende Agora",
+        "footer.logo": "ALEPHANT.ONE",
+        "footer.col1.title": "Empresa",
+        "footer.col1.about": "Sobre",
+        "footer.col1.services": "Serviços",
+        "footer.col1.pricing": "Investimento",
+        "footer.col1.contact": "Contato",
+        "footer.col2.title": "Agentes",
+        "footer.col3.title": "Recursos",
+        "footer.col4.title": "Contato",
+        "footer.copyright": "© 2025 ALEPHANT.ONE | Todos os direitos reservados"
+      },
+      en: {
+        "page.title": "ALEPHANT.ONE | The New Avatar of Your Brand",
+        "header.logo": "ALEPHANT.ONE",
+        "nav.about": "About",
+        "nav.services": "Services",
+        "nav.pricing": "Investment",
+        "nav.contact": "Contact",
+        "hero.tagline": "The New Avatar of Your Brand",
+        "hero.title": "ALEPHANT.ONE",
+        "hero.slogan": "We Accelerate Businesses. We Decelerate People.",
+        "hero.button": "Schedule a Strategic Meeting",
+        "about.title": "What if Your Brand Could Speak for Itself?",
+        "about.text": "We're not talking about a chatbot. We're talking about a living presence. An agent that represents your brand as a true digital ambassador—communicating authentically, solving intelligently, and connecting deeply. It's your essence, amplified by AI.",
+        "about.heading": "THE ALEPHANT.ONE EXPERIENCE",
+        "about.text2": "We build the living avatar of your company: an agent trained with your identity, narrative, tone, and future vision. It serves, sells, learns, and evolves as if it were you.",
+        "about.heading2": "THE WORLD HAS CHANGED. SO MUST YOUR BRAND.",
+        "about.card1.title": "Customers Demand Everything Now.",
+        "about.card1.text": "Instantaneity transforms customer expectation. Your business must be available 24/7 with perfect answers.",
+        "about.card2.title": "Generic Chatbots Destroy Trust.",
+        "about.card2.text": "Off-the-shelf solutions frustrate customers and tarnish your reputation with impersonal experiences.",
+        "about.card3.title": "Shallow Solutions Cost You.",
+        "about.card3.text": "Time, energy, and reputation—every lost interaction is an opportunity for the competition.",
+        "services.title": "THE ALEPHANT DIFFERENCE",
+        "services.card1.title": "Narrative & Copy Strategy",
+        "services.card1.text": "Your brand speaks with authenticity, empathy, and the power to convert. Every word is carefully crafted to reflect your essence.",
+        "services.card2.title": "Intelligent Implementation",
+        "services.card2.text": "Focused on real problems and measurable results from the start — no wasted resources.",
+        "services.card3.title": "Continuous Evolution",
+        "services.card3.text": "Your agent learns from every interaction and improves day by day—a true asset that grows in value.",
+        "services.card4.title": "Premium Support",
+        "services.card4.text": "An elegant agent delivering immediate, high-end interactions and personalized experiences.",
+        "services.card5.title": "Strategic Support",
+        "services.card5.text": "Merging technology with empathy to offer reliable and effective strategic solutions.",
+        "services.card6.title": "Conversational Research",
+        "services.card6.text": "Transforming every dialogue into valuable insights that drive real growth for your brand.",
+        "agents.title": "MEET OUR AGENTS",
+        "agents.card1.title": "Premium Support",
+        "agents.card1.text": "An elegant agent delivering immediate, high-end interactions.",
+        "agents.card2.title": "Strategic Support",
+        "agents.card2.text": "Merging tech and empathy to offer reliable strategic solutions.",
+        "agents.card3.title": "Conversational Research",
+        "agents.card3.text": "Turning every conversation into valuable insights that drive growth.",
+        "future.title": "TRANSFORMING BUSINESSES INTO FUTURE-READY ENTERPRISES",
+        "future.text": "You're not just creating an assistant—you're installing a new hub of communication, intelligence, and digital presence. You're building the business of the future, right now.",
+        "future.vision1.title": "While You Sleep, Your Agent Sells.",
+        "future.vision1.text": "Wake up to find your agent has closed deals—a dream come true for every entrepreneur.",
+        "future.vision2.title": "Peace for You, Acceleration for Your Business.",
+        "future.vision2.text": "Eliminate the pressure to always be available; your agent drives progress while you focus on what matters.",
+        "future.vision3.title": "Freedom for You, A Vibrant Brand.",
+        "future.vision3.text": "Grow and expand while your agent consistently maintains your brand’s communication.",
+        "future.vision4.title": "Strategy for You, Seamless Operations.",
+        "future.vision4.text": "Devote your time to long-term planning while your agent handles daily engagements flawlessly.",
+        "pricing.title": "EXPERIENCE ALEPHANT.ONE",
+        "pricing.price": "Investment",
+        "pricing.range": "R$ 28,000 to R$ 78,000",
+        "pricing.note": "(Determined by the complexity and potential of your business)",
+        "pricing.feature1": "Strategic diagnosis of critical interactions",
+        "pricing.feature2": "Exclusive brand storytelling",
+        "pricing.feature3": "Persuasive, conversational copy",
+        "pricing.feature4": "Scripts trained in up to 100 real scenarios",
+        "pricing.feature5": "Custom implementation within 2 weeks",
+        "pricing.feature6": "1 month of optimization included",
+        "pricing.feature7": "Reports with strategic insights",
+        "pricing.feature8": "Monthly subscription: R$ 3,000 to R$ 4,000",
+        "pricing.guaranteeTitle": "EXCELLENCE GUARANTEED",
+        "pricing.guaranteeText": "If within 60 days your agent fails to charm, optimize, or sell as expected, we’ll deliver a complete strategic reimplementation—at no extra cost.",
+        "pricing.button": "Schedule a Strategic Meeting",
+        "cta.title": "READY FOR THE NEXT LEVEL?",
+        "cta.text": "Schedule a Strategic Meeting and discover how an ALEPHANT.ONE agent can transform your company’s communication, time, and future.",
+        "cta.button": "Schedule Now",
+        "footer.logo": "ALEPHANT.ONE",
+        "footer.col1.title": "Company",
+        "footer.col1.about": "About",
+        "footer.col1.services": "Services",
+        "footer.col1.pricing": "Investment",
+        "footer.col1.contact": "Contact",
+        "footer.col2.title": "Agents",
+        "footer.col3.title": "Resources",
+        "footer.col4.title": "Contact",
+        "footer.copyright": "© 2025 ALEPHANT.ONE | All rights reserved"
+      }
+    };
+
+    let currentLang = 'pt';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      document.title = translations[lang]["page.title"];
+      document.getElementById('lang-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    }
+
+    document.getElementById('lang-pt').addEventListener('click', () => setLanguage('pt'));
+    document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+
+    document.addEventListener('DOMContentLoaded', () => setLanguage(currentLang));
+
+    /* Menu Hamburger Toggle */
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
-    
-    // Efeito fade-in com IntersectionObserver
+
+    /* Efeito fade-in com IntersectionObserver */
     document.addEventListener('DOMContentLoaded', () => {
       const fadeElements = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver(entries => {
@@ -1471,8 +1278,8 @@
       }, { threshold: 0.1 });
       fadeElements.forEach(el => observer.observe(el));
     });
-    
-    // Efeito Parallax simples na Hero Section
+
+    /* Efeito Parallax simples na Hero Section */
     window.addEventListener('scroll', () => {
       const scrollPos = window.pageYOffset;
       document.querySelector('.hero').style.backgroundPositionY = -(scrollPos * 0.5) + 'px';
